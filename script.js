@@ -1,3 +1,10 @@
+var currTrim = 1;
+var finalTrim = 7;
+
+while(currTrim<=finalTrim) {
+    getEvalTrim(currTrim++);
+}
+
 var getEvalTrim = function(trimestr) { 
     $.get(
         'https://student.psu.ru/pls/stu_cus_et/stu.signs', 
@@ -21,10 +28,4 @@ var getEvalTrim = function(trimestr) {
         });
         console.log(obj);
     });
-}
-
-var i=1;
-
-while(i<=7) {
-    getEvalTrim(i++);
 }
